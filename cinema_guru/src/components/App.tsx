@@ -8,6 +8,7 @@ function App() {
 
   useEffect(() => {
     const accessToken = localStorage.getItem("accessToken");
+    console.log("doing stuff--", `accesstoken: ${accessToken}`);
     if (!accessToken) return;
 
     axios({

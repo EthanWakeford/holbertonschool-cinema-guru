@@ -14,9 +14,20 @@ const Authentication: React.FC<AuthenticationProps> = ({
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
+  const signInClicked = () => {
+    set_switch(true);
+  };
+
+  const signOutClicked = () => {
+    set_switch(false);
+  };
+
   return (
     <>
-      <div></div>
+      <form action="sign-in">
+        <button onClick={signInClicked}>Sign In</button>
+        <button onClick={signOutClicked}>Sign Up</button>
+      </form>
     </>
   );
 };
